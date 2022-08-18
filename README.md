@@ -1,21 +1,22 @@
 Heroku link:
 
+
 https://app-graphql-github.herokuapp.com/
 
 First you need to enter a query in the form.
 Enter "github login" in quotes
 
 Query:
-
+```
 {
   searchRepository(query: "Mercer13"){
     name
     repositoryList
   }
 }
-
+```
 Output:
-
+```
 {
   "data": {
     "searchRepository": [
@@ -26,3 +27,4 @@ Output:
     ]
   }
 }
+```
