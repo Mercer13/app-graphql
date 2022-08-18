@@ -1,24 +1,28 @@
-# README
+Heroku link:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://app-graphql-github.herokuapp.com/
 
-Things you may want to cover:
+First you need to enter a query in the form.
+Enter "github login" in quotes
 
-* Ruby version
+Query:
 
-* System dependencies
+{
+  searchRepository(query: "Mercer13"){
+    name
+    repositoryList
+  }
+}
 
-* Configuration
+Output:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+{
+  "data": {
+    "searchRepository": [
+      {
+        "name": "Bohdan Oleksiichuk",
+        "repositoryList": "[\"app-graphql\", \"Computer-systems-architecture-and-system-programming\", \"Course-Work-Spotting\", \"Dijkstra-s-algorithm\", \"Frontend-Website-NaviExpo\", \"matrix-flows\", \"Online-System-Auction\", \"Online-System-Auction-Re2021\", \"Orleans-Hello-World\"]"
+      }
+    ]
+  }
+}
